@@ -7,8 +7,16 @@ import resolveAcceptLanguage from "resolve-accept-language";
 export const getLocaleFromAcceptLanguageHeader = (
   acceptLanguage: string | undefined
 ) => {
-  /** the first item is the default locale */
-  const supported = ["en-US", "de-DE", "fr-FR", "nl-NL", "pt-PT", "pt-BR"];
+  /** the first item is the default locale, CAUTION: only works with full-locales! */
+  const supported = [
+    "en-US",
+    "en-GB",
+    "de-DE",
+    "nl-NL",
+    "fr-FR",
+    "pt-PT",
+    "pt-BR",
+  ];
 
   if (!acceptLanguage) return supported[0];
 
