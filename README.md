@@ -1,5 +1,7 @@
 This a repo showcasing the setup of i18n without internationalized routes in next.js
 
+> **_NOTE_** 💡: For i18n, Next uses internationalized routing as a standard. This ain't nice. So here's how to do it without the routing-part.
+
 ### install it
 
 &rarr; clone and install
