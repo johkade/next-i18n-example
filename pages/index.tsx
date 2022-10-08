@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { getServerSidePropsWithI18n } from "../util/get-ssp-with-i18n";
 import { NextPageWithI18n } from "../util/types";
+import { externalTFunction } from "../util/external-t-function";
 
 export const getServerSideProps = getServerSidePropsWithI18n;
 
@@ -20,7 +21,10 @@ const Home: NextPageWithI18n = ({ locale }) => {
       <main className={styles.main}>
         <p>locale: {locale}</p>
         <br />
+        <p>{externalTFunction("hello")}</p>
+
         <p>{t("hello")}</p>
+
         <Link href={"/some-other-page"}>{t("toSomeOtherPage")}</Link>
       </main>
     </div>
