@@ -17,13 +17,14 @@ yarn dev
 ### how it's done
 
 - get the `accept-language` header in `getServerSideProps`
-- parse it with [resolve-accept-language](https://github.com/Avansai/resolve-accept-language) to get the locale
+- parse it with [resolve-accept-language](https://github.com/Avansai/resolve-accept-language) to get the locale from the header, which looks like this for example: `en,de;q=0.9`
 
 ### caveats
 
-- [resolve-accept-language](https://github.com/Avansai/resolve-accept-language) only works with full locales (like `de-DE`). However, it can still work, if the country-code is not set by the browser.
+- [resolve-accept-language](https://github.com/Avansai/resolve-accept-language) only works with full locales (like `de-DE`). However, it can still work, if the country-code is not set by the browser. This however still means that short-locales or locales with other country-codes with receive the appropriate language.
 
 ### Features:
 
 - [x] use t() with useTranslation-hook
 - [x] use t() outside of component
+- [x] use serverside translations without routing
