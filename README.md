@@ -4,7 +4,7 @@ This a repo showcasing the setup of i18n without internationalized routes in nex
 
 ### install it
 
-&rarr; clone and install
+&rarr; clone and install deps
 
 ### run it
 
